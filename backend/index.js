@@ -1,4 +1,3 @@
-// filepath: c:\Code\pw2-assignment-crud\backend\index.js
 const express = require("express"); 
 const sqlite3 = require("sqlite3").verbose(); 
 const cors = require("cors"); 
@@ -43,7 +42,6 @@ app.get("/api/usuarios", (req, res) => {
     });
 });
 
-// filepath: c:\Code\pw2-assignment-crud\backend\index.js
 app.delete("/api/usuarios/:id", (req, res) => {
   const { id } = req.params;
   const sql = "DELETE FROM usuarios WHERE id = ?";
@@ -56,7 +54,6 @@ app.delete("/api/usuarios/:id", (req, res) => {
   });
 });
 
-// filepath: c:\Code\pw2-assignment-crud\backend\index.js
 app.put("/api/usuarios/:id", (req, res) => {
   const { id } = req.params;
   const { nome } = req.body;
